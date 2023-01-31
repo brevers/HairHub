@@ -11,6 +11,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    
+    <!--Header called from _header.html.erb-->
+    <%= render "pages/header"%>
+    <div class= "container">
+      <br/>
+      <p class="notice"><%= notice %></p><!--class="alert alert-success"-->
+      <p class="alert"><%= alert %></p><!--class="alert alert-danger"-->
+
+       <%= yield %>
+      <br/>
+    </div>
+
+    <!--Footer called from _footer.html.erb-->
+    <%= render "pages/footer"%>
   </body>
 </html>
