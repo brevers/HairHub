@@ -1,2 +1,7 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,900;1,700&display=swap');
+:root{
+    --bs-body-font-family: 'Montserrat', sans-serif;
+}
