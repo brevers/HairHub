@@ -1,35 +1,45 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark d-flex justify-content-between ">
 
   <%= image_tag("logo.png", class: "img-responsive", style:"width: 18rem;") %>  
-  <div class="d-flex justify-content-end">
-    <form class="form-inline my-2 my-lg-0 d-flex align-content-end" >
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+  <div class="d-flex align-content-end">
+    <form class="form-inline my-2 d-flex align-content-end" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
       <button class="btn btn-outline-info my-6 my-sm-0" style="margin-left: 20px; margin-right: 50px" type="submit">Search</button>
     </form>
+
+ 
+    <!--DELETE USER SESSION-->
+    <li class="nav-item" style="margin-right: 20px;"> <!--button_to-->
+    <%= link_to "Sign out", destroy_client_session_path, :method => :delete, class:"btn btn-outline-danger" %>
+    </li>
   <div>
+
 </nav>
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd; padding-left: 100px; padding-right: 100px" >
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
   <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</li>
+</ul>
 
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-  
 
   <div class= "d-flex justify-content-end">
-    <a class="nav-link"  href="#">Clients </a>
-    <a class="nav-link" style="padding-left: 50px;" href="#">Agencies</a>
+    <a class="nav-link"  href="#">Clients</a>
+    <a class="nav-link" style="padding-left: 50px;" href="#">Agencies</a> 
     <a class="nav-link" style="padding-left: 50px;" href="#">How It Works</a>
   </div>
 
+
   <div style="d-flex align-content-end flex-wrap">
-    <a class="btn btn-outline-info" href="/login" role="button">
-      Login </a>
-    <a class="btn btn-outline-dark" href="/signup" role="button">
-      Sign Up </a>
+    <%= link_to "Log In", new_client_session_path , class:"btn btn-outline-info" %> 
+    <%= link_to "Sign Up",  new_client_registration_path, class:"btn btn-outline-dark" %>
   </div>
 </nav>
