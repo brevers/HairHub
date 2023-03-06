@@ -1,16 +1,19 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark d-flex justify-content-between ">
-  <%= image_tag("logo.png", class: "img-responsive", style:"width: 18rem;") %>
+  <a href="/" class="navbar-brand">
+    <%= image_tag("logo.png", class: "img-responsive", style:"width: 18rem;") %>
+  </a>
   <div class="d-flex align-content-end">
     <form class="form-inline my-2 d-flex align-content-end">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-info my-6 my-sm-0" style="margin-left: 20px; margin-right: 50px" type="submit">Search</button>
     </form>
 
-    <!--DELETE USER SESSION-->
-    <li class="nav-item" style="margin-right: 20px;">
-      <!--button_to-->
-      <%= link_to "Sign out", destroy_client_session_path, :method => :delete, class:"btn btn-outline-danger" %>
-    </li>
+    <% if client_signed_in? %>
+      <!--DELETE USER SESSION-->
+      <li class="nav-item" style="margin-right: 20px;">
+        <%= link_to "Sign out", destroy_client_session_path, :method => :delete, class:"btn btn-outline-danger" %>
+      </li>
+    <% end %>
   <div>
 </nav>
 
@@ -30,19 +33,21 @@
   <div class="d-flex justify-content-center align-items-center w-100">
     <ul class="list-unstyled d-flex mr-auto">
       <li class="nav-item mr-5">
-        <a class="nav-link" href="#">Clients</a>
+        <%= link_to 'Clients', '/clients',class:"nav-link" %>
       </li>
       <li class="nav-item mr-5">
-        <a class="nav-link" href="#">Agencies</a>
+        <%= link_to 'Agencies', '/agencies',class:"nav-link" %>
       </li>
       <li class="nav-item mr-5">
         <%= link_to 'Who We Are', '/WhoWeAre',class:"nav-link" %>
       </li>
     </ul>
 
-    <div class="ml-auto">
-      <%= link_to "Log In", new_client_session_path, class:"btn btn-outline-info mr-2" %>
-      <%= link_to "Sign Up", new_client_registration_path, class:"btn btn-outline-dark" %>
-    </div>
+    <% if !client_signed_in? %>
+      <div class="ml-auto">
+        <%= link_to "Log In", new_client_session_path, class:"btn btn-outline-info mr-2" %>
+        <%= link_to "Sign Up", new_client_registration_path, class:"btn btn-outline-dark" %>
+      </div>
+    <% end %>
   </div>
 </nav>

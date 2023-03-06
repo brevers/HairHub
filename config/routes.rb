@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # Define the root for the website
   root 'pages#home'
   get 'WhoWeAre', to: 'pages#WhoWeAre'
+  get 'agencies', to: 'pages#agencies'
+  get 'clients', to: 'pages#clients'
 
   # Define the sign-out route for the Clients model
   devise_scope :client do
