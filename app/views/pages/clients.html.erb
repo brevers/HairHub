@@ -1,1 +1,35 @@
-<h1>CLIENTS</h1>
+<body>
+    <div class="container py-4">
+      <h1 class="mb-4">Welcome , <%= current_client %>!</h1>
+
+      <div class="card mb-4">
+        <div class="card-header">Your Personalized Profile</div>
+        <div class="card-body">
+          <h5 class="card-title">Here's the information you provided about yourself, your budget, treatment dates, and location:</h5>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Name:</strong> </li>
+            <li class="list-group-item"><strong>Email:</strong> </li>
+            <li class="list-group-item"><strong>Budget:</strong> </li>
+            <li class="list-group-item"><strong>Treatment Dates:</strong> </li>
+            <li class="list-group-item"><strong>Location:</strong> ></li>
+          </ul>
+          <%= link_to "Edit Profile", class: "btn btn-primary mt-3" %>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">Companies</div>
+        <div class="card-body">
+          <h5 class="card-title">If you're a company that can help our users find the best hair transplant treatment, get in touch with us.</h5>
+          <%= link_to "Register as a company", class: "btn btn-primary mt-3" %>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <%= link_to "Browse Treatments",  class: "btn btn-primary" %>
+        <%= link_to "Sign Out", destroy_client_session_path, method: :delete, class: "btn btn-danger ml-3" %>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js" integrity="sha512-5z5p5q3q5fm5EJ0KfrnLNTB2eKK9iGiKivjKtB1Cz2wEqFySTiiu/VycVYDq3XZKjJbLc/PP7pjAe4KU8i6mzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>

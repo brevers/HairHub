@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Define the root for the website
   root 'pages#home'
   get 'WhoWeAre', to: 'pages#WhoWeAre'
+  get 'howItWorks', to: 'pages#howItWorks'
   get 'agencies', to: 'pages#agencies'
   get 'clients', to: 'pages#clients'
 
