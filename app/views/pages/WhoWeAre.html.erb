@@ -1,17 +1,43 @@
-
-    <h1>About HairHub - Central Source of Information for Hair Transplants</h1>
-    <h1>About HairHub</h1>
-        <p>HairHub is a central source of information for people searching for information 
-        online about hair transplants. Our aim is to provide a one-stop-shop for anyone 
-        looking to undergo a hair transplant, where they can find all the information they
-        need in one place and connect with reputable companies that offer the treatment 
-        they are looking for.</p>
-
-    <h2>Why HairHub?</h2>
-        <p>The hair transplant industry is in high demand and we believe that this is due to the increasing importance that people place on taking care of their health and bodies. However, despite the popularity of hair transplants, there is a lack of information and transparency in the market. Clients often have to do their own research on multiple sites to find the information they need, making it a time-consuming and frustrating process.</p>
-        <p>Our project seeks to address this issue by creating a website where clients can register and create their own individual profile. They can then submit pictures and a request for the type of treatment they are looking for. Companies can submit offers directly to the client, allowing them to compare different offers from several companies. If the client decides to accept an offer, the transaction can be completed securely through our website.</p>
-    <h2>Our Vision</h2>
-        <p>We want to change the way the market for hair transplants works by putting the onus on businesses to find clients, rather than clients having to do all the legwork themselves. By creating a central hub for information and offers, we hope to make the process of finding a reputable hair transplant company easier and faster for everyone.</p>
-        <p>Our project is unique in that we centralize all the information about hair transplants in one space, creating a safe and secure environment for clients to make their purchases. By doing so, we hope to eliminate the risk of fraudulent third parties and give clients peace of mind when making their decision.</p>
-    <h2>Join HairHub Today</h2>
-        you are interested in undergoing a hair transplant or if you are a company that offers this service, we invite you to join HairHub today. By registering with us, you will gain access to a community of clients and businesses that are passionate about hair transplants and providing a high-quality service. Join us today and be part of the future of the hair transplant industry!</p>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-12">
+      <h1 class="text-center">About HairHub - Central Source of Information for Hair Transplants</h1>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <h2 class="text-center">Why HairHub?</h2><br>
+      <p>The hair transplant industry is in high demand and we believe that this is due to the increasing importance that people place on taking care of their health and bodies. However, despite the popularity of hair transplants, there is a lack of information and transparency in the market. Clients often have to do their own research on multiple sites to find the information they need, making it a time-consuming and frustrating process.</p>
+      <div class= "text-center">
+        <%= image_tag("explain.png",style:"width: 22rem;") %>
+      </div>
+      <p>Our project seeks to address this issue by creating a website where clients can register and create their own individual profile. They can then submit pictures and a request for the type of treatment they are looking for. Companies can submit offers directly to the client, allowing them to compare different offers from several companies. If the client decides to accept an offer, the transaction can be completed securely through our website.</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Our Vision</h2><br>
+      <div class= "text-center">
+        <%= image_tag("three.png",style:"width: 20rem;") %>
+      </div>
+      <p>We want to change the way the market for hair transplants works by putting the onus on businesses to find clients, rather than clients having to do all the legwork themselves. By creating a central hub for information and offers, we hope to make the process of finding a reputable hair transplant company easier and faster for everyone.</p>
+      <hr>
+      <p>Our project is unique in that we centralize all the information about hair transplants in one space, creating a safe and secure environment for clients to make their purchases. By doing so, we hope to eliminate the risk of fraudulent third parties and give clients peace of mind when making their decision.</p>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <%= image_tag("OurVision.jpeg", class: "img-responsive", style:"width: 35rem;") %>
+    </div>
+    <div class="col-md-6">
+      <%= image_tag("OurVision.jpeg", class: "img-responsive", style:"width: 35rem;") %>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2 class="text-center">Join HairHub Today</h2><br>
+      <p class="text-center">If you are interested in undergoing a hair transplant or if you are a company that offers this service, we invite you to join HairHub today. By registering with us, you will gain access to a community of clients and businesses that are passionate about hair transplants and providing a high-quality service. Join us today and be part of the future of the hair transplant industry!</p>
+    </div>
+    <div class="text-center"><br>
+        <%= link_to "Sign Up", new_client_registration_path, class:"btn btn-dark btn-lg", style:"width: 200px;" %>
+   </div>
+  </div>
+</div>
