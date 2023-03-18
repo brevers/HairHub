@@ -1,0 +1,54 @@
+	<div class="container">
+		<h1 class="text-center mt-4 mb-5">How HairHubApp Works</h1>
+		<h2>For Individuals</h2>
+		<ol>
+			<li>Register an account: To use HairHubApp, you need to register and create an account. This will allow you to research agencies that match what you are looking for.</li>
+			<li>Connect with agencies: Once you are logged in, you can connect with agencies around the world by searching on a map by location or by agency name.</li>
+			<li>Set up filters: You can set up a maximum budget and add other filters like proximity to narrow down your search results.</li>
+			<li>Reach out to agencies: When you find an offer that matches your requirements, you can reach out to the agency and they will respond whether they will accept or reject the offer.</li>
+			<li>Private chat: If the agency accepts the offer, a new private chat will be available for you both to stay in contact.</li>
+			<li>Payment: After agreement, an e-commerce payment will be available to complete the transaction.</li>
+		</ol>
+		<h2 class="mt-5">For Hair Agencies</h2>
+		<ol>
+			<li>Register: If you are a hair agency, you will first need to register as a regular user.</li>
+			<li>Submit application: After registering, you can submit an application to register your agency with us. Mandatory private documentation must be provided.</li>
+			<li>Map search: A map will be available to search for your agency manually.</li>
+			<li>Request verification: Once you find your agency, you can request to verify it as yours. Regulatory documentation must be provided for verification.</li>
+		</ol>
+	</div>
+<div class="jumbotron jumbotron-fluid" style="background-image: url('<%= asset_path('backgroundform.png') %>');">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <%= image_tag("Wehelp.png",style:"width: 22rem;", class:"rounded-circle") %>
+      </div>
+      <div class="col-md-8">
+        <div class="card rounded" style="background-color: rgba(255, 255, 255, 0.8);">
+          <div class="card-body">
+            <h2 class="card-title mb-5">How Can We Help?</h2>
+            <form>
+              <div class="form-group rounded">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group rounded">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+              <div class="form-group rounded">
+                <label for="subject">Subject:</label>
+                <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+              </div>
+              <div class="form-group rounded">
+                <label for="message">Message:</label>
+                <textarea class="form-control" rows="5" id="message" placeholder="Enter your message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-info my-6 my-sm-0">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
