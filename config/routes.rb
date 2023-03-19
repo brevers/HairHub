@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'howItWorks', to: 'pages#howItWorks'
   get 'agencies', to: 'pages#agencies'
   get 'clients', to: 'pages#clients'
+  get 'findAgency', to: 'pages#findAgency'
 
   # Define the sign-out route for the Clients model
   devise_scope :client do

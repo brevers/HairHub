@@ -22,10 +22,10 @@
     <li class="nav-item dropdown">
       <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
+        <%= link_to 'Profile', '/clients',class:"dropdown-item" %>
+        <%= link_to 'Delete Profile', client_registration_path, :confirm => "Are you sure?", :method => :delete, class:"dropdown-item" %>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <%= link_to 'Contact Us', '/howItWorks',class:"dropdown-item" %>
       </div>
     </li>
   </ul>

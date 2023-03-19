@@ -10,7 +10,7 @@
                 <%= image_tag("2.png", class: "img-responsive", style:"width: 35rem;") %>
                 <h5 class="card-title p-3 mb-2">Connect With Agencies Around the World</h5>
                 <p class="card-text p-3 mb-2">Find thee best offers from different agencies that suit your needs</p>
-                <a href="#" class="btn btn-info btn-lg p-3 mb-3 d-flex justify-content-center">Find an Agency</a>
+                <%= link_to 'Find an Agency', '/findAgency', class: 'btn btn-info btn-lg p-3 mb-3 d-flex justify-content-center' %>
             </div>
         <div class="container">
             <%= image_tag("searchagency.png", class: "img-responsive", style:"width: 38rem;") %>
@@ -38,6 +38,6 @@
 </div>
 <div class="p-3 mb-2 "></div>
 
-<div class= "container d-flex justify-content-center">   
+<div class= "container d-flex justify-content-center">
     <%= image_tag("community.png", class: "img-responsive", style:"width: 80rem;") %>
 </div>
