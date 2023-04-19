@@ -2,20 +2,17 @@ Rails.application.routes.draw do
   devise_for :views
   devise_for :agencies
   devise_for :clients
+
   # Define the root for the website
   root 'pages#home'
-  get 'WhoWeAre', to: 'pages#WhoWeAre'
-  get 'howItWorks', to: 'pages#howItWorks'
+  get 'who_we_are', to: 'pages#who_we_are'
+  get 'how_it_works', to: 'pages#how_it_works'
   get 'agencies', to: 'pages#agencies'
   get 'clients', to: 'pages#clients'
-  get 'findAgency', to: 'pages#findAgency'
+  get 'find_agency', to: 'pages#find_agency'
 
   # Define the sign-out route for the Clients model
   devise_scope :client do
     delete '/clients/sign_out', to: 'devise/sessions#destroy'
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
- 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

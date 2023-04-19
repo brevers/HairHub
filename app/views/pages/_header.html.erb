@@ -18,6 +18,7 @@
 </nav>
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd; padding-left: 100px; padding-right: 100px">
+  <!-- (Temporarily?) remove the settings section.
   <ul class="navbar-nav mr-auto">
     <li class="nav-item dropdown">
       <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
@@ -25,24 +26,22 @@
         <%= link_to 'Profile', '/clients',class:"dropdown-item" %>
         <%= link_to 'Delete Profile', client_registration_path, :confirm => "Are you sure?", :method => :delete, class:"dropdown-item" %>
         <div class="dropdown-divider"></div>
-        <%= link_to 'Contact Us', '/howItWorks',class:"dropdown-item" %>
+        <%= link_to 'Contact Us', '/how_it_works',class:"dropdown-item" %>
       </div>
     </li>
   </ul>
+  -->
 
   <div class="d-flex justify-content-center align-items-center w-100">
     <ul class="list-unstyled d-flex mr-auto">
       <li class="nav-item mr-5">
-        <%= link_to 'Clients', '/clients',class:"nav-link" %>
-      </li>
-      <li class="nav-item mr-5">
         <%= link_to 'Agencies', '/agencies',class:"nav-link" %>
       </li>
       <li class="nav-item mr-5">
-        <%= link_to 'Who We Are', '/WhoWeAre',class:"nav-link" %>
+        <%= link_to 'Who We Are', '/who_we_are',class:"nav-link" %>
       </li>
       <li class="nav-item mr-5">
-        <%= link_to 'How It Works', '/howItWorks',class:"nav-link" %>
+        <%= link_to 'How It Works', '/how_it_works',class:"nav-link" %>
       </li>
     </ul>
 

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-lg-8">
+      <div class="card mb-3">
+        <div class="card-header">
+          <h5 class="card-title">Search for an Agency</h5>
+        </div>
+        <div data-controller="places" data-action="maps-callback@window->places#initMap">
+          <%= form_with(local: true) do |form| %>
+            <div class="card-body">
+              <div>
+                <%= form.label :address, style: "display: block" %>
+                <%= form.search_field :address, data: {
+                  target: "places.field",
+                  action: "keydown->places#keyDown"
+                }, autofocus: true,
+                   style: "width: 100%;" %>
+              </div>
+              <div data-target="places.map"
+                   style="min-height:400px;min-width:400px;margin-top:20px;">
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-3">
+        <div class="card-header">
+          <h5 class="card-title">Claim Your Agency</h5>
+        </div>
+        <div class="card-body">
+          <p>Are you the owner of an agency that's already listed on our site?</p>
+          <%= link_to "Claim your agency", new_agency_registration_path, class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</script>

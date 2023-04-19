@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  def WhoWeAre; end
-  def howItWorks; end
+  def who_we_are; end
+  def how_it_works; end
   end
 end
