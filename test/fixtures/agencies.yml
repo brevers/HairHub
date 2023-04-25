@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Jane's Co
+  pitch: Best company in town
+  latitude: 1
+  longitude: 1
+
+two:
+  name: John's Co
+  pitch: Best company in town
+  latitude: 1
+  longitude: 1

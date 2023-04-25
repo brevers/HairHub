@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :agencies
   # Define the root for the website
   root 'pages#home'
 
