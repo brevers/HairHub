@@ -15,9 +15,15 @@
                   action: "keydown->places#keyDown"
                 }, autofocus: true,
                    style: "width: 100%;" %>
+
+                <%= form.hidden_field :latitude, data: {
+                  places_target: "latitude"
+                }, style: "width: 100%;" %>
+
+                <%= form.hidden_field :longitude, data: {
+                  places_target: "longitude"
+                }, style: "width: 100%;" %>
               </div>
-              <div data-places-target="latitude"></div>
-              <div data-places-target="longitude"></div>
               <div data-places-target="map"
                    style="min-height:400px;min-width:400px;margin-top:20px;">
               </div>
@@ -33,6 +39,7 @@
         </div>
         <div class="card-body">
           <p>Are you the owner of an agency that's already listed on our site?</p>
+          <!-- HERE we have to pass the selected coordinates from the map. -->
           <%= link_to "Claim your agency", new_agency_registration_path, class: "btn btn-success" %>
         </div>
       </div>
