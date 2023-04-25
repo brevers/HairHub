@@ -11,14 +11,14 @@
               <div>
                 <%= form.label :address, style: "display: block" %>
                 <%= form.search_field :address, data: {
-                  target: "places.field",
+                  places_target: "field",
                   action: "keydown->places#keyDown"
                 }, autofocus: true,
                    style: "width: 100%;" %>
               </div>
-              <div data-target="places.latitude"></div>
-              <div data-target="places.longitude"></div>
-              <div data-target="places.map"
+              <div data-places-target="latitude"></div>
+              <div data-places-target="longitude"></div>
+              <div data-places-target="map"
                    style="min-height:400px;min-width:400px;margin-top:20px;">
               </div>
             </div>
