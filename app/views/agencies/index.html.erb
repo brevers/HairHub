@@ -1,1 +1,62 @@
-All Stores
+<div class="container" style="min-height: 500px;">
+  <div class="row">
+    <div class="col-md-12">
+      <b>
+        Select an agency from our Top Partners or
+      </b>
+      <%= link_to "find and agency near you", find_agency_path, class: "btn btn-success" %>
+    </div>
+  </div>
+  <div style="min-height:40px;">
+
+  </div>
+  <%= @agencies.each_slice(3) do |a1, a2, a3| %>
+    <div class="row">
+      <!-- Maybe extract each of these tiles into their own partial view -->
+        <div class="col-md-4">
+          <%= link_to agency_path(a1), style: "text-decoration: none; color: #333" do %>
+            <div>
+              <h2>
+                <%= a1.name %>
+              </h2>
+              <div>
+                <%= a1.pitch %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="col-md-4">
+          <% if a2.present? %>
+            <%= link_to agency_path(a2), style: "text-decoration: none; color: #333" do %>
+              <div>
+                <h2>
+                  <%= a2.name %>
+                </h2>
+                <div>
+                  <%= a2.pitch %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="col-md-4">
+          <% if a3.present? %>
+            <%= link_to agency_path(a3), style: "text-decoration: none; color: #333" do %>
+              <div>
+                <h2>
+                  <%= a3.name %>
+                </h2>
+                <div>
+                  <%= a3.pitch %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+</div>

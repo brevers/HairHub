@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :agencies, only: [:index, :show]
+  resources :agencies, only: [:index, :show] do
+    resources :messages, only: [:new, :create]
+  end
 
   # Define the root for the website
   root 'pages#home'

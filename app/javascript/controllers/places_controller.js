@@ -32,6 +32,7 @@ export default class extends Controller {
       anchorPoint: new google.maps.Point(0, -29)
     });
 
+    // HERE: Use agencies from our seed file!
     const stores = [
       [{ lat: -34.595255, lng: -58.37235390000001 }, "Catalinas"],
       [{ lat: -34.5992496, lng: -58.3747789 }, "Galerias"],
