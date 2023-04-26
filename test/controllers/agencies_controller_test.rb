@@ -10,39 +10,8 @@ class AgenciesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_agency_url
-    assert_response :success
-  end
-
-  test "should create agency" do
-    assert_difference("Agency.count") do
-      post agencies_url, params: { agency: { latitude: @agency.latitude, longitude: @agency.longitude, name: @agency.name, pitch: @agency.pitch } }
-    end
-
-    assert_redirected_to agency_url(Agency.last)
-  end
-
   test "should show agency" do
     get agency_url(@agency)
     assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_agency_url(@agency)
-    assert_response :success
-  end
-
-  test "should update agency" do
-    patch agency_url(@agency), params: { agency: { latitude: @agency.latitude, longitude: @agency.longitude, name: @agency.name, pitch: @agency.pitch } }
-    assert_redirected_to agency_url(@agency)
-  end
-
-  test "should destroy agency" do
-    assert_difference("Agency.count", -1) do
-      delete agency_url(@agency)
-    end
-
-    assert_redirected_to agencies_url
   end
 end
