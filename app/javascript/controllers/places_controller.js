@@ -44,7 +44,14 @@ export default class extends Controller {
 
         marker.addListener("click", () => {
           infoWindow.close();
-          infoWindow.setContent(`<h3>${marker.getTitle()}</h3><a href='mailto:info@example.com'>Conact us!</a>`);
+          infoWindow.setContent(
+          `
+            <h3>${agency.name}</h3>
+            <div>${agency.pitch}</div>
+            <hr/>
+            <a href='/agencies/${agency.id}/messages/new' class='btn btn-success'>Conact us!</a>
+          `
+          );
           infoWindow.open(marker.getMap(), marker);
         });
       });

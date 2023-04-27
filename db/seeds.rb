@@ -37,7 +37,7 @@ end
 
 Agency.find_or_create_by(name: "Grace's Co") do |agency|
   agency.owner = grace
-  agency.pitch = "Far away but the better"
+  agency.pitch = "Far away but way the better :)"
   agency.latitude = -34.5992496
   agency.longitude = -58.3747789
 end
