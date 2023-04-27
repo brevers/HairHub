@@ -3,7 +3,7 @@
     <% if @agency.errors.any? %>
       <div style="color: red">
         <ul>
-          <% @gency.errors.each do |error| %>
+          <% @agency.errors.each do |error| %>
             <li><%= error.full_message %></li>
           <% end %>
         </ul>

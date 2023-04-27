@@ -4,6 +4,11 @@ class AgenciesController < ApplicationController
   # GET /agencies or /agencies.json
   def index
     @agencies = Agency.all
+
+    respond_to do |format|
+      format.html
+      format.json  { render :json => @agencies }
+    end
   end
 
   # GET /agencies/1 or /agencies/1.json

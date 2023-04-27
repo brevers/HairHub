@@ -32,26 +32,21 @@ export default class extends Controller {
       anchorPoint: new google.maps.Point(0, -29)
     });
 
-    // HERE: Use agencies from our seed file!
-    const stores = [
-      [{ lat: -34.595255, lng: -58.37235390000001 }, "Catalinas"],
-      [{ lat: -34.5992496, lng: -58.3747789 }, "Galerias"],
-      [{ lat: -34.6005397, lng: -58.36730120000001 }, "Hard Rock"],
-      [{ lat: -34.5980234, lng: -58.36418620000001 }, "Madero Boardwalk"],
-    ];
+    $.get("/agencies.json").done((agencies) => {
 
-    stores.forEach(([position, title], _i) => {
-      const infoWindow = new google.maps.InfoWindow();
-      const marker = new google.maps.Marker({
-        map: this.map,
-        position: new google.maps.LatLng(position.lat, position.lng),
-        title: title,
-      });
+      agencies.forEach((agency) => {
+        const infoWindow = new google.maps.InfoWindow();
+        const marker = new google.maps.Marker({
+          map: this.map,
+          position: new google.maps.LatLng(agency.latitude, agency.longitude),
+          title: agency.name,
+        });
 
-      marker.addListener("click", () => {
-        infoWindow.close();
-        infoWindow.setContent(`<h3>${marker.getTitle()}</h3><a href='mailto:info@example.com'>Conact us!</a>`);
-        infoWindow.open(marker.getMap(), marker);
+        marker.addListener("click", () => {
+          infoWindow.close();
+          infoWindow.setContent(`<h3>${marker.getTitle()}</h3><a href='mailto:info@example.com'>Conact us!</a>`);
+          infoWindow.open(marker.getMap(), marker);
+        });
       });
     });
   }
