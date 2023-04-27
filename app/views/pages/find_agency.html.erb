@@ -5,6 +5,8 @@
         <div class="card-header">
           <h5 class="card-title">Search for an Agency</h5>
         </div>
+
+
         <div data-controller="places" data-action="maps-callback@window->places#initMap">
           <%= form_with(local: true) do |form| %>
             <div class="card-body">
@@ -30,6 +32,9 @@
             </div>
           <% end %>
         </div>
+
+
+
       </div>
     </div>
     <div class="col-md-6 col-lg-4">

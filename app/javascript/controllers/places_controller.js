@@ -36,6 +36,7 @@ export default class extends Controller {
 
       agencies.forEach((agency) => {
         const infoWindow = new google.maps.InfoWindow();
+
         const marker = new google.maps.Marker({
           map: this.map,
           position: new google.maps.LatLng(agency.latitude, agency.longitude),
@@ -49,6 +50,8 @@ export default class extends Controller {
             <h3>${agency.name}</h3>
             <div>${agency.pitch}</div>
             <hr/>
+            <b>${agency.phone}</b>
+            <hr />
             <a href='/agencies/${agency.id}/messages/new' class='btn btn-success'>Conact us!</a>
           `
           );
