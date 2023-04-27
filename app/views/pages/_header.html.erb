@@ -30,6 +30,13 @@
       <li class="nav-item mr-5">
         <%= link_to 'How It Works', '/how_it_works',class:"nav-link" %>
       </li>
+
+      <% if user_signed_in? %>
+        <li class="nav-item mr-5">
+          <!-- If current user is an store owner we have to use a different path. -->
+          <%= link_to 'Messages', messages_path, class:"nav-link" %>
+        </li>
+      <% end %>
     </ul>
 
     <% if !user_signed_in? %>

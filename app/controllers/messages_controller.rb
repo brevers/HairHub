@@ -1,6 +1,10 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_agency
+  before_action :set_agency, except: [:index]
+
+  def index
+    @messages = Message.user_messages_grouped_by_agency(current_user)
+  end
 
   def new
     @message = Message.new

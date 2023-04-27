@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   namespace :owner do
     resources :agencies, except: [:index] do
       get 'dashboard', to: 'agencies#dashboard'
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   resources :agencies, only: [:index, :show] do
     resources :messages, only: [:new, :create]
   end
+
+  resources :messages, only: [:index, :new, :create]
 
   # Define the root for the website
   root 'pages#home'
