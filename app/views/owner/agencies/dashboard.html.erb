@@ -2,4 +2,29 @@
   <h1>
     Owner's Dashboard
   </h1>
+  <hr>
+  <div>
+    <div>
+      <h2>Messages</h2>
+      <div>
+        <% @messages.each do |user, messages| %>
+          <div>
+            <b>
+              <%= user.name %> (<%= user.email %>)
+            </b>
+          </div>
+          <div>
+            <% messages.each do |message| %>
+              <div style="font-size:1em">
+                <%= message.content %>
+                <i style="font-size:.6em;padding-left:20px;">
+                  Received: <%= message.created_at %>.</i>
+              </div>
+            <% end %>
+          </div>
+          <hr>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

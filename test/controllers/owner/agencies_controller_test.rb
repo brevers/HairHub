@@ -2,8 +2,11 @@ require "test_helper"
 
 module Owner
   class AgenciesControllerTest < ActionDispatch::IntegrationTest
+    include Devise::Test::IntegrationHelpers
+
     setup do
-      @agency = agencies(:one)
+      @agency = agencies(:johns_co)
+      sign_in users(:john)
     end
 
     test "should get dashboard" do
@@ -12,7 +15,7 @@ module Owner
     end
 
     test "should get new" do
-      get new_owner_agency_url
+      get new_owner_agency_url(@agency)
       assert_response :success
     end
 

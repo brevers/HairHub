@@ -33,8 +33,11 @@
 
       <% if user_signed_in? %>
         <li class="nav-item mr-5">
-          <!-- If current user is an store owner we have to use a different path. -->
-          <%= link_to 'Messages', messages_path, class:"nav-link" %>
+          <% if current_user.owner? %>
+            <%= link_to 'Dashboard', owner_agency_dashboard_path(current_user.agency), class:"nav-link" %>
+          <% else %>
+            <%= link_to 'Messages', messages_path, class:"nav-link" %>
+          <% end %>
         </li>
       <% end %>
     </ul>
