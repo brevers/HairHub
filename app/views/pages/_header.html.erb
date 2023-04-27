@@ -19,15 +19,6 @@
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd; padding-left: 100px; padding-right: 100px">
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item dropdown">
-      <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <%= link_to 'Profile', '/clients',class:"dropdown-item" %>
-        <%= link_to 'Delete Profile', client_registration_path, :confirm => "Are you sure?", :method => :delete, class:"dropdown-item" %>
-        <div class="dropdown-divider"></div>
-        <%= link_to 'Contact Us', '/howItWorks',class:"dropdown-item" %>
-      </div>
-    </li>
   </ul>
 
   <div class="d-flex justify-content-center align-items-center w-100">
