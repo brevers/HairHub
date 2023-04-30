@@ -8,10 +8,10 @@
       <button class="btn btn-outline-info my-6 my-sm-0" style="margin-left: 20px; margin-right: 50px" type="submit">Search</button>
     </form>
 
-    <% if client_signed_in? %>
+    <% if user_signed_in? %>
       <!--DELETE USER SESSION-->
       <li class="nav-item" style="margin-right: 20px;">
-        <%= link_to "Sign out", destroy_client_session_path, data: { turbo_method: :delete }, class: "btn btn-outline-danger" %>
+        <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-outline-danger" %>
         </li>
     <% end %>
   <div>
@@ -20,27 +20,33 @@
 <nav class="navbar navbar-light" style="background-color: #e3f2fd; padding-left: 100px; padding-right: 100px">
   <ul class="navbar-nav mr-auto">
   </ul>
-
   <div class="d-flex justify-content-center align-items-center w-100">
     <ul class="list-unstyled d-flex mr-auto">
-      <li class="nav-item mr-5">
-        <%= link_to 'Clients', '/clients',class:"nav-link" %>
-      </li>
       <li class="nav-item mr-5">
         <%= link_to 'Agencies', '/agencies',class:"nav-link" %>
       </li>
       <li class="nav-item mr-5">
-        <%= link_to 'Who We Are', '/WhoWeAre',class:"nav-link" %>
+        <%= link_to 'Who We Are', '/who_we_are',class:"nav-link" %>
       </li>
       <li class="nav-item mr-5">
-        <%= link_to 'How It Works', '/howItWorks',class:"nav-link" %>
+        <%= link_to 'How It Works', '/how_it_works',class:"nav-link" %>
       </li>
+
+      <% if user_signed_in? %>
+        <li class="nav-item mr-5">
+          <% if current_user.owner? %>
+            <%= link_to 'Dashboard', owner_agency_dashboard_path(current_user.agency), class:"nav-link" %>
+          <% else %>
+            <%= link_to 'Messages', messages_path, class:"nav-link" %>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
 
-    <% if !client_signed_in? %>
+    <% if !user_signed_in? %>
       <div class="ml-auto">
-        <%= link_to "Log In", new_client_session_path, class:"btn btn-outline-info mr-2" %>
-        <%= link_to "Sign Up", new_client_registration_path, class:"btn btn-outline-dark" %>
+        <%= link_to "Log In", new_user_session_path, class:"btn btn-outline-info mr-2" %>
+        <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-outline-dark" %>
       </div>
     <% end %>
   </div>

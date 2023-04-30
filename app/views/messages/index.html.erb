@@ -1,0 +1,22 @@
+<div>
+  <h1>Your Messages</h1>
+  <div>
+    <% @messages.each do |agency_name, messages| %>
+      <div>
+        <h3>
+          <%= agency_name %>
+        </h3>
+      </div>
+      <div>
+        <% messages.each do |message| %>
+          <div style="font-size:1.25em">
+            <%= message.content %>
+            <i style="font-size:.6em;padding-left:20px;">
+              Sent: <%= message.created_at %>.</i>
+          </div>
+        <% end %>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+</div>

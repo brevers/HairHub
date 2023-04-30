@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+jane:
+  email: jane@example.com
+  name: Jane Doe
+  role: 0
+
+john:
+  email: john@example.com
+  name: John Doe
+  role: 1

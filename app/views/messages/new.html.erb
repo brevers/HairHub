@@ -1,0 +1,23 @@
+<div>
+  <%= form_for :message, url: agency_messages_path(@agency) do |form| %>
+    <% if @agency.errors.any? %>
+      <div style="color: red">
+        <ul>
+          <% @agency.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h3>
+      How can we help?
+    </h3>
+    <div>
+      <%= form.text_area :content %>
+    </div>
+    <div>
+      <%= form.submit("Send", class: "btn btn-primary") %>
+    </div>
+  <% end %>
+</div>

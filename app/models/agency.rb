@@ -1,6 +1,11 @@
 class Agency < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  belongs_to :user, optional: true
+
+  alias_attribute :owner, :user
+
+  has_many :messages
+
+  def messages_grouped_by_user
+    messages.group_by do |m| m.user end
+  end
 end

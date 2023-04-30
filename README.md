@@ -1,29 +1,20 @@
-<<<<<<< HEAD
+
 # HairHub
 Central source of information for people searching for information online about hair transplants.
-=======
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website is designed to provide users with a fast, stable website for finding personalized treatment offers. The website is built with a smooth sales channel integration, using Twilio SMS, Google Maps API, and Stripe Payment to provide users with the best possible experience.
 
-Things you may want to cover:
+## Features
+Different types of users, Pubic and Private (Client and Agency), with different capabilities and options
+APIs are used to pull data from a search bar and locate businesses on Google Maps
+Private and public messages between users to improve communication
+Payment integration with Stripe once the offer is accepted
+TDD and Continuous integration for increased security
 
-* Ruby version
+## Technologies
 
-* System dependencies
+## Contrubuting
+Contributions to HairHub are always welcome! If you find a bug or have a feature request, please open an issue on the repository. If you'd like to contribute code, please fork the repository and submit a pull request.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> bb22ca3 (first commit)
+## License
+HairHub is released under the MIT License.
