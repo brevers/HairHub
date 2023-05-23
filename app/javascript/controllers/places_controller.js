@@ -18,8 +18,8 @@ export default class extends Controller {
 
   initMap() {
     this.map = new google.maps.Map(this.mapTarget, {
-      center: new google.maps.LatLng(-34.5992496, -58.3747789),
-      zoom: 15
+      center: new google.maps.LatLng(39.9208, 32.8541),
+      zoom: 6
     });
 
     this.autocomplete = new google.maps.places.Autocomplete(this.fieldTarget);
@@ -44,19 +44,20 @@ export default class extends Controller {
         });
 
         marker.addListener("click", () => {
-          infoWindow.close();
-          infoWindow.setContent(
-          `
-            <h3>${agency.name}</h3>
-            <div>${agency.pitch}</div>
-            <hr/>
-            <b>${agency.phone}</b>
-            <hr />
-            <a href='/agencies/${agency.id}/messages/new' class='btn btn-success'>Conact us!</a>
-          `
-          );
+          infoWindow.setContent(getInfoWindowContent(agency));
           infoWindow.open(marker.getMap(), marker);
         });
+        
+        function getInfoWindowContent(agency) {
+          return `
+            <h3>${agency.name}</h3>
+            <div>${agency.pitch}</div>
+            <hr>
+            <b>${agency.phone}</b>
+            <hr>
+            <a href='/agencies/${agency.id}/messages/new' class='btn btn-outline-info my-6 my-sm-0'>Contact us!</a>
+          `;
+        }
       });
     });
   }
