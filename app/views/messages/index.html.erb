@@ -1,22 +1,22 @@
-<div>
-  <h1>Your Messages</h1>
-  <div>
+<div class="container" style="min-height: 500px;">
+  <h1 class="text-center mb-4"> Your Messages</h1>
+  <div style="background-color: #e3f2fd; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
     <% @messages.each do |agency_name, messages| %>
       <div>
         <h3>
           <%= agency_name %>
-        </h3>
+        </h3><br>
       </div>
       <div>
         <% messages.each do |message| %>
-          <div style="font-size:1.25em">
+          <div style="font-size:1.25em; background-color: #daf7fc; padding: 20px; border: 1px solid #ccc; border-radius: 8px; ">
             <%= message.content %>
             <i style="font-size:.6em;padding-left:20px;">
               Sent: <%= message.created_at %>.</i>
-          </div>
+          </div> <br>
         <% end %>
       </div>
       <hr>
     <% end %>
-  </div>
+  </div> <br>
 </div>
