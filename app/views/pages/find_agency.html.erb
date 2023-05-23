@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 col-lg-8">
-      <div class="card mb-3">
-        <div class="card-header">
-          <h5 class="card-title">Search for an Agency</h5>
+      <div class="card mb-3" style= " border:10px solid #ccc; border-radius: 8px;">
+        <div class="card-header navbar-dark bg-dark d-flex">
+          <h5 class="card-title text-white">Search for an Agency</h5>
         </div>
 
 
@@ -27,7 +27,7 @@
                 }, style: "width: 100%;" %>
               </div>
               <div data-places-target="map"
-                   style="min-height:400px;min-width:400px;margin-top:20px;">
+                   style="min-height:700px;min-width:500px;margin-top:40px;">
               </div>
             </div>
           <% end %>
@@ -38,14 +38,14 @@
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-header">
-          <h5 class="card-title">Claim Your Agency</h5>
+      <div class="card mb-3" style= "border:10px solid #ccc; border-radius: 8px;">
+        <div class="card-header navbar-dark bg-dark d-flex">
+          <h5 class="card-title text-white">Claim Your Agency</h5>
         </div>
         <div class="card-body">
           <p>Are you the owner of an agency that's already listed on our site?</p>
-          <!-- HERE we have to pass the selected coordinates from the map. -->
-          <%= link_to "Claim your agency", "", class: "btn btn-success" %>
+          <!-- HERE have to pass the selected coordinates from the map. -->
+          <%= link_to "Claim your agency", "", class:"btn btn-info md" %>
         </div>
       </div>
     </div>
@@ -53,3 +53,4 @@
 </div>
 
 </script>
+

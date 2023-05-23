@@ -6,59 +6,60 @@
       </h1>
     </div>
     <div class="col-md-6">
-      <%= link_to "Find an Agency Near You", find_agency_path, class: "btn btn-success" %>
+      <%= link_to "Find an Agency Near You", find_agency_path, class:"btn btn-info md" %>
     </div>
   </div>
   <hr>
-  <div style="min-height:40px;">
-
-  </div>
-  <%= @agencies.each_slice(3) do |a1, a2, a3| %>
+  <div style="min-height:40px;"></div>
+  
+  <% @agencies.each_slice(3) do |a1, a2, a3| %>
     <div class="row">
-      <!-- Maybe extract each of these tiles into their own partial view -->
-        <div class="col-md-4">
-          <%= link_to agency_path(a1), style: "text-decoration: none; color: #333" do %>
-            <div>
-              <h2>
+      <!-- Agency 1 -->
+      <div class="col-md-4">
+        <% if a1.present? %>
+          <div class="agency-container" style="background-color: #e3f2fd; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+            <%= link_to agency_path(a1), style: "text-decoration: none; color: #333" do %>
+              <h2 class="agency-name" style="color: #333;">
                 <%= a1.name %>
               </h2>
-              <div>
+              <div class="agency-pitch" style="color: #666;">
                 <%= a1.pitch %>
               </div>
-            </div>
-          <% end %>
-        </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
 
-        <div class="col-md-4">
-          <% if a2.present? %>
+      <!-- Agency 2 -->
+      <div class="col-md-4">
+        <% if a2.present? %>
+          <div class="agency-container" style="background-color: #e3f2fd; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
             <%= link_to agency_path(a2), style: "text-decoration: none; color: #333" do %>
-              <div>
-                <h2>
-                  <%= a2.name %>
-                </h2>
-                <div>
-                  <%= a2.pitch %>
-                </div>
+              <h2 class="agency-name" style="color: #333;">
+                <%= a2.name %>
+              </h2>
+              <div class="agency-pitch" style="color: #666;">
+                <%= a2.pitch %>
               </div>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
+      </div>
 
-        <div class="col-md-4">
-          <% if a3.present? %>
+      <!-- Agency 3 -->
+      <div class="col-md-4">
+        <% if a3.present? %>
+          <div class="agency-container" style="background-color: #e3f2fd; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
             <%= link_to agency_path(a3), style: "text-decoration: none; color: #333" do %>
-              <div>
-                <h2>
-                  <%= a3.name %>
-                </h2>
-                <div>
-                  <%= a3.pitch %>
-                </div>
+              <h2 class="agency-name" style="color: #333;">
+                <%= a3.name %>
+              </h2>
+              <div class="agency-pitch" style="color: #666;">
+                <%= a3.pitch %>
               </div>
             <% end %>
-          <% end %>
-        </div>
-
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>
