@@ -3,6 +3,22 @@
     Owner's Dashboard
   </h1>
   <hr>
+
+  <div>
+    <h2>Plans</h2>
+    <hr>
+    <% @plans.each do |plan| %>
+      <div>
+        <%= plan.title %>
+      </div>
+      <div>
+        <%= plan.description %>
+      </div>
+      <div>
+        <%= number_to_currency(plan.price) %>
+      </div>
+    <% end %>
+  </div>
   <div>
     <div style="background-color: #e3f2fd; padding: 20px; border: 5px solid #ccc; border-radius: 8px;">
       <h2>Messages</h2> <br>
