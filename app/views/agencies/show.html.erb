@@ -7,6 +7,27 @@
     <%= @agency.pitch %>
   </div>
   <hr>
+  <hr>
+  <div>
+    <h2>Plans</h2>
+    <hr>
+    <% @agency.plans.each do |plan| %>
+      <div>
+        <%= plan.title %>
+      </div>
+      <div>
+        <%= plan.description %>
+      </div>
+      <div>
+        <%= number_to_currency(plan.price) %>
+      </div>
+      <div>
+        <%= button_to "Buy", "", class: "btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+
   <div>
     <%= link_to "Contact Us", new_agency_message_path(@agency), class: "btn btn-primary" %>
   </div>
