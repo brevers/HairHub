@@ -9,16 +9,46 @@
     <hr>
     <% @plans.each do |plan| %>
       <div>
-        <%= plan.title %>
+        <h3>
+          <%= plan.title %>
+        </h3>
       </div>
       <div>
-        <%= plan.description %>
+        <span>
+          <%= plan.description %>
+        </span>
       </div>
       <div>
         <%= number_to_currency(plan.price) %>
       </div>
     <% end %>
+    <hr>
+    <h2>
+      Add New Plan
+    </h2>
+    <%= form_for :plan,
+        url: owner_agency_plans_url(agency_id: current_user.agency.id),
+        method: :post do |f| %>
+      <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+      <div>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+      </div>
+
+      <div>
+        <%= f.label :price %>
+        <%= f.number_field :price %>
+      </div>
+
+      <%= f.submit("Create", class: "btn btn-success") %>
+    <% end %>
   </div>
+  <hr>
+
   <div>
     <div style="background-color: #e3f2fd; padding: 20px; border: 5px solid #ccc; border-radius: 8px;">
       <h2>Messages</h2> <br>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     # At the moment, users can't create stores. So no new/create actions.
     resources :agencies, except: [:index, :new, :create] do
       get 'dashboard', to: 'agencies#dashboard'
+      resources :plans
     end
   end
 

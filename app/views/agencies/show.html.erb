@@ -13,10 +13,14 @@
     <hr>
     <% @agency.plans.each do |plan| %>
       <div>
-        <%= plan.title %>
+        <h3>
+          <%= plan.title %>
+        </h3>
       </div>
       <div>
-        <%= plan.description %>
+        <span>
+          <%= plan.description %>
+        </span>
       </div>
       <div>
         <%= number_to_currency(plan.price) %>
