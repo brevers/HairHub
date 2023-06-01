@@ -3,32 +3,12 @@
     <%= @agency.name %>
   </h1>
   <hr>
-  <div style="min-height:100px;">
+  <div style="min-height:40px;margin-bottom: 20px;">
     <%= @agency.pitch %>
   </div>
-  <hr>
-  <hr>
+
   <div>
-    <h2>Plans</h2>
-    <hr>
-    <% @agency.plans.each do |plan| %>
-      <div>
-        <h3>
-          <%= plan.title %>
-        </h3>
-      </div>
-      <div>
-        <span>
-          <%= plan.description %>
-        </span>
-      </div>
-      <div>
-        <%= number_to_currency(plan.price) %>
-      </div>
-      <div>
-        <%= button_to "Buy", "", class: "btn btn-success" %>
-      </div>
-    <% end %>
+    <%= render "agencies/plans", plans: @agency.plans %>
   </div>
   <hr>
 

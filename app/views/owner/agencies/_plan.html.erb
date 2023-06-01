@@ -1,0 +1,26 @@
+<div class="col-md-5" style="margin-bottom:40px; background:#FDF7E9; margin: 10px; padding: 20px; border-radius:10px;border-style:solid;border-color:#ECE7DB">
+  <div>
+    <h4>
+      <%= plan.title %>
+    </h4>
+  </div>
+  <div>
+    <span>
+      <%= plan.description %>
+    </span>
+  </div>
+  <div>
+    <%= number_to_currency(plan.price) %>
+  </div>
+  <hr>
+  <div>
+    <%= link_to "Edit", "", class: "btn btn-primary" %>
+    <%= link_to "Delete",
+      owner_agency_plan_path(agency, plan),
+      class: "btn btn-danger", data: {
+        "turbo-method": :delete,
+        "turbo_confirm": "Are you sure?"
+      }
+    %>
+  </div>
+</div>
