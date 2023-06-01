@@ -13,6 +13,7 @@ class SalesController < ApplicationController
       #
       # * The user gets redirected to the platform.
       # * The user makes a payment there
+
       # * You get a callback from the payment confirming the charge
       # * You confirm the sale in your system
 
