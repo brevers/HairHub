@@ -3,11 +3,19 @@
     <%= @agency.name %>
   </h1>
   <hr>
-  <div style="min-height:100px;">
+  <div style="min-height:40px;margin-bottom: 20px;">
     <%= @agency.pitch %>
   </div>
-  <hr>
+
   <div>
-    <%= link_to "Contact Us", new_agency_message_path(@agency), class: "btn btn-primary" %>
+    <%= render "agencies/plans", plans: @agency.plans %>
+  </div>
+  <hr>
+
+  <div>
+    <%= link_to "Contact Us",
+      new_agency_message_path(@agency),
+      class: "btn btn-primary"
+    %>
   </div>
 </div>

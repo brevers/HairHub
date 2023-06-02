@@ -1,0 +1,27 @@
+<section>
+  <div style="background-color: #e3f2fd; padding: 20px; border: 5px solid #ccc; border-radius: 8px;">
+    <h2>Messages</h2> <br>
+    <div>
+      <% @messages.each do |user, messages| %>
+        <div class="mb-3" style="background-color: #daf7fc; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+          <b>
+            <%= user.name %> (<%= user.email %>)
+          </b>
+          <div>
+            <% messages.each do |message| %>
+              <div class="message-container" >
+                <div class="message-content" >
+                  <%= message.content %>
+                </div>
+                <div class="message-info">
+                  <i style="font-size:.6em;padding-left:20px;">Received: <%= message.created_at %>.</i>
+                </div>
+              </div>
+          </div>
+          <% end %>
+        </div>
+        <hr style="border-color: #ccc;">
+      <% end %>
+    </div> <br>
+  </div>
+</section>

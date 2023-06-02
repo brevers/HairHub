@@ -6,6 +6,8 @@ module Owner
     # GET /dashboard
     def dashboard
       @messages = current_user.agency.messages_grouped_by_user
+      @plans = current_user.agency.plans
+      @sales = current_user.agency.sales.order [created_at: :desc]
     end
 
     # GET /agencies/1 or /agencies/1.json

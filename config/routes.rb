@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
+  get 'sales/create'
   devise_for :users
 
   namespace :owner do
     # At the moment, users can't create stores. So no new/create actions.
     resources :agencies, except: [:index, :new, :create] do
       get 'dashboard', to: 'agencies#dashboard'
+      resources :plans
     end
   end
 
   resources :agencies, only: [:index, :show] do
     resources :messages, only: [:new, :create]
+    resources :plans do
+      resources :sales, only: [:create] do
+      end
+    end
   end
 
   resources :messages, only: [:index, :new, :create]

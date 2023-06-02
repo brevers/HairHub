@@ -1,0 +1,19 @@
+<div class="col-md-5" style="margin-bottom:40px; margin: 10px; padding: 20px; border-radius:10px;border-style:solid;border-color:#bbb">
+  <div>
+    <h4>
+      <%= plan.title %>
+    </h4>
+  </div>
+  <div>
+    <span>
+      <%= plan.description %>
+    </span>
+  </div>
+  <div>
+    <%= number_to_currency(plan.price) %>
+  </div>
+  <hr>
+  <div>
+    <%= button_to "Buy", agency_plan_sales_path(@agency, plan), class: "btn btn-success" %>
+  </div>
+</div>
