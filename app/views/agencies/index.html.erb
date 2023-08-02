@@ -4,12 +4,12 @@
       <h1 class="text-center">Top Partners</h1>
     </div>
     <div class="col-md-6 d-flex justify-content-end" style="padding: 40px;">
-      <%= link_to "Find an Agency Near You", find_agency_path, class: "btn btn-info ", style: "padding: 20px 60px;"%>
+      <%= link_to "Find an Agency Near You", find_agency_path, class: "btn btn-info", style: "padding: 20px 60px;"%>
     </div>
   </div>
   <hr>
   <div style="min-height:40px;"></div>
-  
+
   <% @agencies.each_slice(3) do |a1, a2, a3| %>
     <div class="row">
       <!-- Agency 1 -->
@@ -60,5 +60,8 @@
         <% end %>
       </div>
     </div>
+    <div style="min-height: 20px;"></div> <!-- Add spacing between rows -->
   <% end %>
 </div>
+
+

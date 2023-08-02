@@ -1,28 +1,27 @@
+# frozen_string_literal: true
+
 module Owner
   class AgenciesController < ApplicationController
     before_action :authenticate_user!
     before_action :ensure_agency_owner!
+    before_action :set_agency, except: :dashboard
 
     # GET /dashboard
     def dashboard
-      @messages = current_user.agency.messages_grouped_by_user
-      @plans = current_user.agency.plans
-      @sales = current_user.agency.sales.order [created_at: :desc]
+      @agencies = current_user.agencies
     end
 
     # GET /agencies/1 or /agencies/1.json
-    def show
-    end
+    def show; end
 
     # GET /agencies/1/edit
-    def edit
-    end
+    def edit; end
 
     # PATCH/PUT /agencies/1 or /agencies/1.json
     def update
       respond_to do |format|
-        if current_user.agency.update(agency_params)
-          format.html { redirect_to owner_agency_url(@agency), notice: "Agency was successfully updated." }
+        if @agency.update(agency_params)
+          format.html { redirect_to owner_agency_url(@agency), notice: 'Agency was successfully updated.' }
           format.json { render :show, status: :ok, location: @agency }
         else
           format.html { render :edit, status: :unprocessable_entity }
@@ -33,19 +32,23 @@ module Owner
 
     # DELETE /agencies/1 or /agencies/1.json
     def destroy
-      current_user.agency.destroy
+      @agency.destroy
 
       respond_to do |format|
-        format.html { redirect_to owner_agencies_url, notice: "Agency was successfully destroyed." }
+        format.html { redirect_to owner_agencies_url, notice: 'Agency was successfully destroyed.' }
         format.json { head :no_content }
       end
     end
 
     private
 
-      # Only allow a list of trusted parameters through.
-      def agency_params
-        params.require(:agency).permit(:name, :pitch, :latitude, :longitude)
-      end
+    def set_agency
+      @agency = current_user.agencies.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def agency_params
+      params.require(:agency).permit(:name, :pitch, :latitude, :longitude)
+    end
   end
 end

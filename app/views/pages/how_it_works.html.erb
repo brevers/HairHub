@@ -10,6 +10,10 @@
         <li>Private chat: If the agency accepts the offer, a new private chat will be available for you both to stay in contact.</li>
         <li>Payment: After agreement, an e-commerce payment will be available to complete the transaction.</li>
       </ol>
+      <br>
+      <div style="display: flex; justify-content: flex-end;">
+       <%= link_to "Sign Up Individual", new_owner_registration_path, class:"btn btn-info" %>
+      </div>
     </div><br>
     <div class="container2" style= "background-color: #e3f2fd; padding: 20px; border:5px solid #ccc; border-radius: 8px;">
       <h2 >For Hair Agencies</h2><br>
@@ -19,6 +23,10 @@
         <li>Map search: A map will be available to search for your agency manually.</li>
         <li>Request verification: Once you find your agency, you can request to verify it as yours. Regulatory documentation must be provided for verification.</li>
       </ol>
+      <br>
+      <div style="display: flex; justify-content: flex-end;">
+        <%= link_to "Sign Up  As Agency", new_owner_registration_path, class:"btn btn-info" %>
+      </div>
     </div> <br>
 	</div> <br> <br>
 
@@ -49,7 +57,9 @@
                 <label for="message">Message:</label>
                 <textarea class="form-control" rows="5" id="message" placeholder="Enter your message"></textarea>
               </div>
-              <button type="submit" class="btn btn-outline-info my-6 my-sm-0">Submit</button>
+              <div style="display: flex; justify-content: center;">
+               <button type="submit" class="btn btn-outline-info my-6 my-sm-0">Submit</button>
+              </div>
             </form>
           </div>
         </div>

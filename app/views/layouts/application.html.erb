@@ -30,11 +30,8 @@
     <%= render "pages/header"%>
     <%= render "layouts/alerts"%>
     <div class= "container" style="min-height:500px;">
-      <br/>
        <%= yield %>
       <br/>
-      <p class="notice"><%= notice %></p><!--class="alert alert-success"-->
-      <p class="alert"><%= alert %></p><!--class="alert alert-danger"-->
     </div>
     <!--Footer called from _footer.html.erb-->
     <%= render "pages/footer"%>

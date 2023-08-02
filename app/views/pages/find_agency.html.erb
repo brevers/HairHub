@@ -1,56 +1,52 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-lg-8">
-      <div class="card mb-3" style= " border:10px solid #ccc; border-radius: 8px;">
-        <div class="card-header navbar-dark bg-dark d-flex">
-          <h5 class="card-title text-white">Search for an Agency</h5>
-        </div>
+  <%= form_for(:agency, local: true, url: owner_claim_path) do |form| %>
+    <div class="row">
+      <div class="col-md-6 col-lg-8">
+        <div class="card mb-3" style= " border:10px solid #ccc; border-radius: 8px;">
+          <div class="card-header navbar-dark bg-dark d-flex">
+            <h5 class="card-title text-white">Search for an Agency</h5>
+          </div>
+          <div data-controller="places" data-action="maps-callback@window->places#initMap">
+              <div class="card-body">
+                <div>
+                  <%= form.label :address, style: "display: block" %>
+                  <%= form.search_field :address, data: {
+                    places_target: "field",
+                    action: "keydown->places#keyDown"
+                  }, autofocus: true,
+                     style: "width: 100%;" %>
 
+                  <%= form.hidden_field :latitude, data: {
+                    places_target: "latitude"
+                  }, style: "width: 100%;" %>
 
-        <div data-controller="places" data-action="maps-callback@window->places#initMap">
-          <%= form_with(local: true) do |form| %>
-            <div class="card-body">
-              <div>
-                <%= form.label :address, style: "display: block" %>
-                <%= form.search_field :address, data: {
-                  places_target: "field",
-                  action: "keydown->places#keyDown"
-                }, autofocus: true,
-                   style: "width: 100%;" %>
-
-                <%= form.hidden_field :latitude, data: {
-                  places_target: "latitude"
-                }, style: "width: 100%;" %>
-
-                <%= form.hidden_field :longitude, data: {
-                  places_target: "longitude"
-                }, style: "width: 100%;" %>
+                  <%= form.hidden_field :longitude, data: {
+                    places_target: "longitude"
+                  }, style: "width: 100%;" %>
+                </div>
+                <div data-places-target="map"
+                     style="min-height:700px;min-width:500px;margin-top:40px;">
+                </div>
               </div>
-              <div data-places-target="map"
-                   style="min-height:700px;min-width:500px;margin-top:40px;">
-              </div>
-            </div>
-          <% end %>
-        </div>
-
-
-
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3" style= "border:10px solid #ccc; border-radius: 8px;">
-        <div class="card-header navbar-dark bg-dark d-flex">
-          <h5 class="card-title text-white">Claim Your Agency</h5>
-        </div>
-        <div class="card-body">
-          <p>Are you the owner of an agency that's already listed on our site?</p>
-          <!-- HERE have to pass the selected coordinates from the map. -->
-          <%= link_to "Claim your agency", "", class:"btn btn-info md" %>
+          </div>
         </div>
       </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-3" style= "border:10px solid #ccc; border-radius: 8px;">
+          <div class="card-header navbar-dark bg-dark d-flex">
+            <h5 class="card-title text-white">Claim Your Agency</h5>
+          </div>
+          <div class="card-body">
+            <p>Are you the owner of an agency that's already listed on our site?</p>
+            <% if current_user&.owner? %>
+              <%= form.submit "Claim your agency", class:"btn btn-info md" %>
+            <% else %>
+              <%= link_to "Sign Up to Claim", new_owner_registration_path, class:"btn btn-dark" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
-
-</script>
 

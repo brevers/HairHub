@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_agency, except: [:index]
@@ -18,7 +20,7 @@ class MessagesController < ApplicationController
     @agency.messages << message
 
     if @agency.save
-      redirect_to root_url, notice: "Message Sent"
+      redirect_to root_url, notice: 'Message Sent'
     else
       render :new
     end
@@ -27,7 +29,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:user_mobile_number, :content)
   end
 
   def set_agency

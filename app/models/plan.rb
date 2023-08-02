@@ -1,5 +1,6 @@
 class Plan < ApplicationRecord
-  # HERE: Add missing validations
+  belongs_to :agency
 
-  has_many :sales
+  # HERE: Add more validations
+  validates :title, :description, :price, presence: true
 end

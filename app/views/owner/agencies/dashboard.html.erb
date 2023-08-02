@@ -1,21 +1,44 @@
-<div class="container">
+<div class="container" style="min-height: 500px;">
   <h1 class="text-center mb-4">
     Owner's Dashboard
   </h1>
+  <hr>
+  <div>
+    <% if current_user.subscription.blank? %>
+      <!-- HERE: Link to Stripe checkout -->
+      Your agencies are registered but not discoverable by our users until you signup for a plan.
+      <br>
+      <%= link_to "Choose Your Plan", new_subscription_path %> now and start getting clients!!
 
-  <section>
-    <%= render "sales" %>
-  </section>
-
-  <div style="min-height:80px"> </div>
-
-  <section>
-    <%= render "plans" %>
-  </section>
-
-  <div style="min-height:80px"> </div>
-
-  <%= render "messages" %>
+    <% else %>
+      <span>
+        Current Plan <%= current_user.user_subscription.subscription.name %>
+      </span>
+    <% end %>
+  </div>
+  <div>
+    <h2>Your Agencies</h2>
+    <div>
+      <% current_user.agencies.each do |agency| %>
+        <div>
+          <!--
+              Render agency dashboard instead
+              * Messages
+              * Plans
+              * Etc...
+            -->
+          <%= link_to agency.name, edit_owner_agency_path(agency) %>
+        </div>
+      <% end %>
+    </div>
+    <hr>
+    <div>
+      <%= link_to "Add Agency", find_agency_path, class: "btn btn-info" %>
+    </div>
+  </div>
 </div>
+
+
+
 
 
