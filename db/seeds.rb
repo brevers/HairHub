@@ -48,16 +48,12 @@ Agency.find_or_create_by(name: "Jane's Co") do |agency|
   UserAgency.create(user: jane, agency: agency)
 end
 
-grace_agency = Agency.find_or_create_by(name: "Grace's Co") do |agency|
+Agency.find_or_create_by(name: "Grace's Co") do |agency|
   agency.owner = grace
   agency.pitch = 'Far away but way the better :)'
   agency.latitude = 39.9334
   agency.longitude = 32.8597
-<<<<<<< HEAD
   UserAgency.create(user: grace, agency: agency)
-=======
-  agency.phone = "(123) 456 7890"
->>>>>>> 771bce5202c1e6251f10cb3e73e7b5c3e952babc
 end
 
 Agency.find_or_create_by(name: 'Bronce') do |agency|
@@ -67,19 +63,3 @@ Agency.find_or_create_by(name: 'Bronce') do |agency|
   agency.longitude = 27.1428
   UserAgency.create(user: elon, agency: agency)
 end
-
-
-Plan.create! \
-    title: "Hair Recovery - Express",
-    description: "Three months treatment",
-    price: 1_200,
-    agency_id: grace_agency.id
-
-Plan.create! \
-    title: "Hair Recovery - Long Term",
-    description: "Six months treatment",
-    price: 2_000,
-    agency_id: grace_agency.id
-
-
-
