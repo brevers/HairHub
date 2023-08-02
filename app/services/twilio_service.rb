@@ -15,7 +15,6 @@ class TwilioService
         to: whatsapp(to_mobile_number)
       )
     end
-  
     private
   
     def whatsapp(number)
