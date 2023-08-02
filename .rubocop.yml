@@ -1,0 +1,97 @@
+require:
+  - rubocop-rails
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-rspec
+
+Layout/DotPosition:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - ./test/fixtures/*.yml
+    - ./config/initializers/*
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - ./app/models/onboarding_process.rb
+
+Rails/OutputSafety:
+  Exclude:
+    - ./app/helpers/*
+
+Naming/AccessorMethodName:
+    Enabled: false
+
+Lint/RequireParentheses:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - ./test/**/*
+
+Metrics/ClassLength:
+  Exclude:
+    - ./test/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - ./spec/**/*
+    - ./config/environments/*
+    - ./lib/tasks/check.rake
+    - ./config/routes.rb
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - ./db/migrate/*
+
+Metrics/AbcSize:
+  Exclude:
+    - ./db/migrate/*
+
+Rails/Output:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Rails/Present:
+  Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+Rails/BulkChangeTable:
+  Enabled: false
+
