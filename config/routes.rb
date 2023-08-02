@@ -1,24 +1,36 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'sales/create'
-  devise_for :users
+  devise_for :users,
+             controllers: {
+               registrations: "devise/extended_registrations"
+             }
+
+  devise_scope :user do
+    get 'new_owner_registration', to: "devise/extended_registrations#owner"
+  end
+
+  post "stripe/webhook", to: "stripe#webhook"
 
   namespace :owner do
-    # At the moment, users can't create stores. So no new/create actions.
-    resources :agencies, except: [:index, :new, :create] do
-      get 'dashboard', to: 'agencies#dashboard'
-      resources :plans
+    get 'dashboard', to: 'agencies#dashboard'
+
+    resource :claim, only: [:create] do
+    end
+
+    resources :agencies, except: %i[index new create] do
     end
   end
 
-  resources :agencies, only: [:index, :show] do
-    resources :messages, only: [:new, :create]
-    resources :plans do
-      resources :sales, only: [:create] do
-      end
-    end
+  resources :subscriptions, only: [:new] do
   end
 
-  resources :messages, only: [:index, :new, :create]
+  resources :agencies, only: %i[index show update] do
+    resources :plans
+    resources :messages, only: %i[new create]
+  end
+
+  resources :messages, only: %i[index new create]
 
   # Define the root for the website
   root 'pages#home'
@@ -28,5 +40,4 @@ Rails.application.routes.draw do
   get 'agencies', to: 'pages#agencies'
   get 'clients', to: 'pages#clients'
   get 'find_agency', to: 'pages#find_agency'
-
 end
