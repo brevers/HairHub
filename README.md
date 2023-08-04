@@ -55,7 +55,19 @@ pass: 123123!
 
 ## Getting Started
 
-To get a local copy of the project up and running, follow these steps:
+To get HairHub up and running on your local machine or server, follow the steps below:
+
+### Prerequisites
+
+Before you begin, ensure you have the following software installed:
+
+- Ruby: We recommend using Ruby 2.7.2 or higher. You can install Ruby using [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://rvm.io/).
+
+- Ruby on Rails: Make sure you have Rails installed. We recommend Rails version 6.1.4 or higher.
+
+- PostgreSQL: HairHub uses PostgreSQL as the database. Ensure you have it installed and running.
+
+- Node.js and Yarn: HairHub uses JavaScript for frontend assets. Install Node.js and Yarn using [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) or [Node.js website](https://nodejs.org/en/).
 
 ## Installation
 
@@ -65,7 +77,24 @@ bash
 git clone https://github.com/brevers/HairHub.git
 cd HairHub
 
+## Usage
 
+## Testing
+HairHub includes a comprehensive test suite to ensure the application's functionality and maintain code quality. The testing setup includes RSpec for unit and integration tests, RuboCop for code linting, and SimpleCov for test coverage reporting. 
+
+**Run Test** 💻
+
+> Run the RSpec test to execute all the tests and display the results on the terminal:
+```
+bundle exec rspec
+```
+> HairHub uses RuboCop for code linting to maintain a consistent coding style. To check for style violations, run:
+```
+bundle exec rubocop
+```
+> To measure the test coverage of the application, SimpleCov is integrated into the test suite. After running the RSpec tests, a coverage report will be generated. You can view the detailed coverage report by opening the coverage/index.html file in your web browser.
+
+> HairHub uses continuous integration to ensure that all tests are automatically run whenever changes are pushed to the repository. The project includes a configuration file for popular CI services such as GitHub Actions or Travis CI. The CI configuration will automatically run tests and check for code style violations on every pull request and push to the main branch.
 
 ## Gems Used
 
@@ -92,7 +121,7 @@ cd HairHub
 
 - [SimpleCov](https://github.com/simplecov-ruby/simplecov): A code coverage analysis tool for tracking test coverage and ensuring thorough testing.
 
-## Contrubuting
+## Contributing
 Contributions to HairHub are always welcome! If you find a bug or have a feature request, please open an issue on the repository. If you'd like to contribute code, please fork the repository and submit a pull request.
 
 ## License
