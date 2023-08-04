@@ -54,7 +54,7 @@ To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository to your local machine:
 
-```bash
+bash
 git clone https://github.com/brevers/HairHub.git
 cd HairHub
 
@@ -70,7 +70,30 @@ Private and public messages between users to improve communication
 Payment integration with Stripe once the offer is accepted
 TDD and Continuous integration for increased security
 
-## Technologies
+## Gems Used
+
+**Here are some of the key gems used in the project:**
+
+- [RSpec](https://rspec.info/): A powerful testing framework for writing unit and integration tests.
+
+- [FactoryBot](https://github.com/thoughtbot/factory_bot): A library for defining and creating test data in a concise and readable manner.
+
+- [Capybara](https://github.com/teamcapybara/capybara): An acceptance test framework for simulating user interactions with the web application.
+
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers): Provides easy and expressive RSpec matchers for validating model associations and validations.
+
+- [RuboCop](https://github.com/rubocop/rubocop): A code linter that ensures consistent and readable coding styles throughout the project.
+
+- [Devise](https://github.com/heartcombo/devise): A flexible authentication solution for Rails applications, used for user authentication in HairHub.
+
+- [Twilio-Ruby](https://github.com/twilio/twilio-ruby): The Twilio API wrapper gem, used to integrate Twilio WhatsApp functionality for smooth communication between users and agencies.
+
+- [Stripe](https://github.com/stripe/stripe-ruby): The Stripe API wrapper gem, utilized for handling subscription payments and integrating Stripe's subscription payment system.
+- [Geocoder](https://github.com/alexreisner/geocoder): A gem that simplifies geocoding and reverse geocoding, utilized for the Google Maps API integration in HairHub.
+
+- [Faker](https://github.com/faker-ruby/faker): A gem that generates random data, used to create realistic test data in the development and testing environment.
+
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov): A code coverage analysis tool for tracking test coverage and ensuring thorough testing.
 
 ## Contrubuting
 Contributions to HairHub are always welcome! If you find a bug or have a feature request, please open an issue on the repository. If you'd like to contribute code, please fork the repository and submit a pull request.
