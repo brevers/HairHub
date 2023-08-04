@@ -31,27 +31,6 @@ This website offers users a speedy and reliable platform to discover customized 
 
 > **Continuous Integration:** Implement continuous integration and automated testing to maintain code quality.
 
-## Demo
-
-To explore the website from an agency's perspective, you can use the following credentials:
-```
-user: grace@example.com
-pass: 123123!
-```
-1. Navigate to the login page.
-2. Enter the provided email and password.
-3. Click the "Login" button.
-4. Once logged in, you will have access to the agency dashboard, where you can manage agency name, subscriptions, and messages.
-
-To experience the website as a user, you can use the following credentials:
-```
-user: John@example.com
-pass: 123123!
-```
-1. Go to the login page.
-2. Enter the provided email and password.
-3. Click the "Login" button.
-4. After logging in, you will be directed to the user features, where you can search for agencies nearby, send messages, and find different offers.
 
 ## Getting Started
 
@@ -99,6 +78,27 @@ rails db:seed
 ```
 rails s
 ```
+## Demo
+
+To explore the website from an agency's perspective, you can use the following credentials:
+```
+user: grace@example.com
+pass: 123123!
+```
+1. Navigate to the login page.
+2. Enter the provided email and password.
+3. Click the "Login" button.
+4. Once logged in, you will have access to the agency dashboard, where you can manage agency name, subscriptions, and messages.
+
+To experience the website as a user, you can use the following credentials:
+```
+user: John@example.com
+pass: 123123!
+```
+1. Go to the login page.
+2. Enter the provided email and password.
+3. Click the "Login" button.
+4. After logging in, you will be directed to the user features, where you can search for agencies nearby, send messages, and find different offers.
 
 ## Usage
 
