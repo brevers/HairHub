@@ -1,8 +1,8 @@
 # HairHub
 ![0098](https://github.com/brevers/HairHub/assets/45858960/2fe6f662-2d0a-4959-913e-2cb3fce91b6e)
-HairHub is a [Rails](https://rubyonrails.org) application which works as central source of information for people searching for information online about hair transplants.
+HairHub is a [Rails](https://rubyonrails.org) application which works as central source of information for people researching online about hair transplants.
 
-This website offers users a speedy and reliable platform to discover customized treatment options. It includes a seamless subscription tool for agencies, utilizing Stripe Subscription Payment for effortless integration. The website also leverages Twilio Whatsapp for improved communication between users and agencies. With built-in Google Maps API, users can easily find nearby agencies, and agencies have the option to claim their listing by subscribing and making a payment to feature on our website.
+This website offers users a speedy and reliable platform to discover customized treatment options. It includes a seamless subscription tool for agencies, utilizing Stripe Subscription Payment for effortless integration. The website also leverages Twilio Whatsapp for improved communication between users and agencies. With built-in Google Maps API, users can easily find nearby offers, while agencies have the option to claim their listing by subscribing and making a payment to feature on our website.
 
 ## Table of Contents
 - [Key Features](#key-features)
