@@ -6,9 +6,9 @@ This website offers users a speedy and reliable platform to discover customized 
 
 ## Table of Contents
 - [Key Features](#key-features)
-- [Demo](#demo)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
+- [Demo](#demo)
 - [Testing](#testing)
 - [Gems Used](#gems-used)
 - [Contributing](#contributing)
