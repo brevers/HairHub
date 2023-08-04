@@ -68,6 +68,11 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    appmap (0.102.1)
+      activesupport
+      method_source
+      rack
+      reverse_markdown
     ast (2.4.2)
     autoprefixer-rails (10.4.13.0)
       execjs (~> 2)
@@ -219,6 +224,8 @@ GEM
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
+    reverse_markdown (2.1.1)
+      nokogiri
     rexml (3.2.5)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
@@ -325,6 +332,7 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  appmap
   bootsnap
   bootstrap (~> 5.2.2)
   bullet
