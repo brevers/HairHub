@@ -161,7 +161,7 @@ HTTP server requests > **ROUTE** >GET /how_it_works
 
 
 ## Contributing
-Contributions to HairHub are always welcome! If you find a bug or have a feature request, please open an issue on the repository. If you'd like to contribute code, please fork the repository and submit a pull request.
+No Contributions allowed untill December 2023. After that date, contributions to HairHub are always welcome! If you find a bug or have a feature request, please open an issue on the repository. If you'd like to contribute code, please fork the repository and submit a pull request.
 
 ## License
 HairHub is released under the MIT License.
