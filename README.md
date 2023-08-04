@@ -11,6 +11,7 @@ This website offers users a speedy and reliable platform to discover customized 
 - [Demo](#demo)
 - [Testing](#testing)
 - [Gems Used](#gems-used)
+- [Dependency Maps](#dependency-maps)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -144,6 +145,20 @@ bundle exec rubocop
 - [Faker](https://github.com/faker-ruby/faker): A gem that generates random data, used to create realistic test data in the development and testing environment.
 
 - [SimpleCov](https://github.com/simplecov-ruby/simplecov): A code coverage analysis tool for tracking test coverage and ensuring thorough testing.
+
+## Dependency Maps
+HTTP server requests > **ROUTE** > GET /who_we_are
+
+![htp](https://github.com/brevers/HairHub/assets/45858960/2517ad2a-0685-4383-b8b2-23f4740db3ec)
+
+HTTP server requests > **ROUTE** > GET /find_agency
+
+![htp2](https://github.com/brevers/HairHub/assets/45858960/451aaa57-0665-4158-9e70-9cc9214dabab)
+
+HTTP server requests > **ROUTE** >GET /how_it_works
+
+![htp34](https://github.com/brevers/HairHub/assets/45858960/413ab38e-54f7-4acf-ad65-fd3d32adfbf3)
+
 
 ## Contributing
 Contributions to HairHub are always welcome! If you find a bug or have a feature request, please open an issue on the repository. If you'd like to contribute code, please fork the repository and submit a pull request.
