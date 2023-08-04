@@ -5,7 +5,7 @@ HairHub is a [Rails](https://rubyonrails.org) application which works as central
 This website offers users a speedy and reliable platform to discover customized treatment options. It includes a seamless subscription tool for agencies, utilizing Stripe Subscription Payment for effortless integration. The website also leverages Twilio Whatsapp for improved communication between users and agencies. With built-in Google Maps API, users can easily find nearby agencies, and agencies have the option to claim their listing by subscribing and making a payment to feature on our website.
 
 ## Table of Contents
-- [Features](#features)
+- [Key Features](#key-features)
 - [Demo](#demo)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
@@ -14,7 +14,7 @@ This website offers users a speedy and reliable platform to discover customized 
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Key Features
 > **User Authentication:** Allow users and agencies to sign up, log in, and manage their accounts securely.
 
 > **Agencies Subscription Tool:** Agencies can seamlessly integrate with the platform using the Stripe Subscription Payment system.
@@ -71,11 +71,34 @@ Before you begin, ensure you have the following software installed:
 
 ## Installation
 
-1. Clone the repository to your local machine:
-
-bash
+> 1. Clone the repository to your local machine:
+```
 git clone https://github.com/brevers/HairHub.git
-cd HairHub
+```
+> 2. Install the required Ruby gems:
+```
+bundle install
+```
+> 3. Install JavaScript packages:
+```
+yarn install
+```
+> 4. Create the database and run migrations:
+```
+rails db:create db:migrate
+```
+> 5. (Optional) Seed the database with sample data:
+```
+rails db:seed
+```
+> 6. Update .env configuration as needed. For example, set up Twilio credentials, Stripe API keys, and any other required settings.
+
+> 7. create a Google Maps API key and add it to config/application.yml.
+
+> 8. Start the Rails server and enjoy
+```
+rails s
+```
 
 ## Usage
 
