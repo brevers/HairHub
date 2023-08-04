@@ -15,14 +15,21 @@ This website offers users a speedy and reliable platform to discover customized 
 - [License](#license)
 
 ## Features
-- **User Authentication:** Allow users and agencies to sign up, log in, and manage their accounts securely.
-- **Agencies Subscription Tool:** Agencies can seamlessly integrate with the platform using the Stripe Subscription Payment system.
-- **Real-time Communication:** Twilio Whatsapp integration enables smooth and efficient communication between users and agencies.
-- **Geolocation Search:** Utilize Google Maps API to allow users to search for nearby agencies.
-- **Agency Claiming:** Agencies have the option to claim their listing on the website by subscribing and making a payment.
-- **Responsive Design:** Ensure a great user experience across different devices with a responsive and mobile-friendly design.
-- **Easy Setup:** Provide simple and clear instructions for users and agencies to get started with the platform.
-- **Continuous Integration:** Implement continuous integration and automated testing to maintain code quality.
+> **User Authentication:** Allow users and agencies to sign up, log in, and manage their accounts securely.
+
+> **Agencies Subscription Tool:** Agencies can seamlessly integrate with the platform using the Stripe Subscription Payment system.
+
+> **Real-time Communication:** Twilio Whatsapp integration enables smooth and efficient communication between users and agencies.
+
+> **Geolocation Search:** Utilize Google Maps API to allow users to search for nearby agencies.
+
+> **Agency Claiming:** Agencies have the option to claim their listing on the website by subscribing and making a payment.
+
+> **Responsive Design:** Ensure a great user experience across different devices with a responsive and mobile-friendly design.
+
+> **Easy Setup:** Provide simple and clear instructions for users and agencies to get started with the platform.
+
+> **Continuous Integration:** Implement continuous integration and automated testing to maintain code quality.
 
 ## Demo
 
@@ -58,17 +65,7 @@ bash
 git clone https://github.com/brevers/HairHub.git
 cd HairHub
 
-# HairHub
-Central source of information for people searching for information online about hair transplants.
 
-This website is designed to provide users with a fast, stable website for finding personalized treatment offers. The website is built with a smooth sales channel integration, using Twilio SMS, Google Maps API, and Stripe Payment to provide users with the best possible experience.
-
-## Features
-Different types of users, Pubic and Private (Client and Agency), with different capabilities and options
-APIs are used to pull data from a search bar and locate businesses on Google Maps
-Private and public messages between users to improve communication
-Payment integration with Stripe once the offer is accepted
-TDD and Continuous integration for increased security
 
 ## Gems Used
 
