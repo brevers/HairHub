@@ -79,7 +79,9 @@ rails db:seed
 rails s
 ```
 ## Demo
+> Visit http://localhost:3000 in your web browser.
 
+### Agency Login
 To explore the website from an agency's perspective, you can use the following credentials:
 ```
 user: grace@example.com
@@ -90,6 +92,7 @@ pass: 123123!
 3. Click the "Login" button.
 4. Once logged in, you will have access to the agency dashboard, where you can manage agency name, subscriptions, and messages.
 
+### User Login
 To experience the website as a user, you can use the following credentials:
 ```
 user: John@example.com
@@ -99,8 +102,6 @@ pass: 123123!
 2. Enter the provided email and password.
 3. Click the "Login" button.
 4. After logging in, you will be directed to the user features, where you can search for agencies nearby, send messages, and find different offers.
-
-## Usage
 
 ## Testing
 HairHub includes a comprehensive test suite to ensure the application's functionality and maintain code quality. The testing setup includes RSpec for unit and integration tests, RuboCop for code linting, and SimpleCov for test coverage reporting. 
