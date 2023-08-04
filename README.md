@@ -15,11 +15,14 @@ This website offers users a speedy and reliable platform to discover customized 
 - [License](#license)
 
 ## Features
-
-- **Discover Hair Salons:** Browse a collection of hair salons and stylists to find the perfect one for your needs.
-- **Book Appointments:** Schedule appointments with your preferred hair salons or stylists directly from the platform.
-- **User Reviews:** Read and leave reviews to help others make informed decisions about hair services.
-- **User Authentication:** Allow users to sign up, log in, and manage their accounts securely.
+- **User Authentication:** Allow users and agencies to sign up, log in, and manage their accounts securely.
+- **Agencies Subscription Tool:** Agencies can seamlessly integrate with the platform using the Stripe Subscription Payment system.
+- **Real-time Communication:** Twilio Whatsapp integration enables smooth and efficient communication between users and agencies.
+- **Geolocation Search:** Utilize Google Maps API to allow users to search for nearby agencies.
+- **Agency Claiming:** Agencies have the option to claim their listing on the website by subscribing and making a payment.
+- **Responsive Design:** Ensure a great user experience across different devices with a responsive and mobile-friendly design.
+- **Easy Setup:** Provide simple and clear instructions for users and agencies to get started with the platform.
+- **Continuous Integration:** Implement continuous integration and automated testing to maintain code quality.
 
 ## Demo
 
