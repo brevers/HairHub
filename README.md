@@ -75,7 +75,16 @@ rails db:seed
 
 > 7. create a Google Maps API key and add it to config/application.yml.
 
-> 8. Start the Rails server and enjoy
+> 8. Open the Rails terminal
+```
+rails c
+```
+> 9. Open Stripe Server to see subscription messages
+```
+stripe listen --forward-to http://localhost:3000/stripe/webhook
+```
+
+> 10. Start the Rails server in a different terminal and enjoy
 ```
 rails s
 ```
