@@ -54,8 +54,6 @@ Agency.find_or_create_by(name: "Grace's Co") do |agency|
   agency.latitude = 39.9334
   agency.longitude = 32.8597
   UserAgency.create(user: grace, agency: agency)
-  agency.phone = "(123) 456 7890"
->>>>>>> 771bce5202c1e6251f10cb3e73e7b5c3e952babc
 end
 
 Agency.find_or_create_by(name: 'Bronce') do |agency|
