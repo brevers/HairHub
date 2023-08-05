@@ -36,7 +36,7 @@ class StripeProcessor
     end
   
     def parse_event
-      @parse_event ||= Stripe::Webhook.construct_event(
+      @event ||= Stripe::Webhook.construct_event(
         payload, signature, endpoint_secret
       )
     end
